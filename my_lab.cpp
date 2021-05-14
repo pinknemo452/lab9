@@ -1,6 +1,7 @@
 #include <iostream>
+#include <utility>
 #include "my_lab.h"
-exception::exception(std::string mes) : message(mes) {}
+exception::exception(std::string mes) : message(std::move(mes)) {}
 
 int polynominal::multiply(polynominal& target) {
 	if (degree > target.degree)
